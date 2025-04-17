@@ -11,11 +11,12 @@ const server = Server.configure({
     console.log("👋 Connection closed");
   },
   async onChange(data) {
+    console.log("--------------------------------");
     console.log(`✍️ Document ${data.documentName} changed`);
+    console.log("data received:", JSON.stringify(data, null, 2));
+    console.log("--------------------------------\n");
   },
 });
 
 // Start the server
 server.listen();
-
-console.log("🚀 Hocuspocus server started on ws://127.0.0.1:1234");
