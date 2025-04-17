@@ -1,8 +1,9 @@
 const { Server } = require("@hocuspocus/server");
 
 // Configure the server
+const port = process.env.PORT || 1234;
 const server = Server.configure({
-  port: 1234,
+  port,
   // No authentication or persistence yet
   async onConnect() {
     console.log("🔌 New connection");
