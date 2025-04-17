@@ -14,7 +14,7 @@ const server = Server.configure({
   async onChange(data) {
     console.log("--------------------------------");
     console.log(`✍️ Document ${data.documentName} changed`);
-    console.log("data received:", JSON.stringify(data, null, 2));
+    console.log("data received:", data);
     console.log("--------------------------------\n");
   },
 });
